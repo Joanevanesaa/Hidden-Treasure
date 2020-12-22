@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D Rb;
 	public float ms = 25;
+
+
     void Start()
     {
         Rb = GetComponent<Rigidbody2D>();
@@ -17,6 +19,19 @@ public class PlayerMovement : MonoBehaviour
     	
         float horiz = Input.GetAxisRaw("Horizontal");
         float verti = Input.GetAxisRaw("Vertical");
+
+        print(HealthBar.health);
+
+        if (horiz != 0)
+        {
+            HealthBar.health -= 0.1f;
+        }
+        else
+        {
+            if(HealthBar.health < 150)
+                HealthBar.health += 0.1f;
+        }
+
         
         Rb.velocity = new Vector2(ms * horiz, verti * ms);
     }

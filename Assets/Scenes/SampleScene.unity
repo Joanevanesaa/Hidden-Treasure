@@ -361,7 +361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa3b7ae63519d984b9856f60b9976138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomNamaBatu: {fileID: 0}
 --- !u!1 &156051208
 GameObject:
   m_ObjectHideFlags: 0
