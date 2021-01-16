@@ -7,6 +7,7 @@ public class HealthBar : MonoBehaviour
 {
     public Slider healthBar;
     public static float health;
+    public GameObject GameOverScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +19,18 @@ public class HealthBar : MonoBehaviour
     void Update()
     {
         healthBar.value = health;
-        Changehealth();
+        ChangeHealth();
     }
 
-    void Changehealth()
+    public void ChangeHealth()
     {
-        
+        if (health <= 0)
+        {
+            GameOverScreen.SetActive(true);
+            Enemy.isGameOver = true;
+        }
     }
+
+ 
+    
 }

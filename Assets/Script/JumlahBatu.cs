@@ -11,7 +11,7 @@ public class JumlahBatu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Jumlah = 0;
+        Jumlah = 1;
         HitungBatu = GetComponent<Text>();
     }
 

@@ -22,14 +22,14 @@ public class PlayerMovement : MonoBehaviour
 
         print(HealthBar.health);
 
-        if (horiz != 0)
+        if (horiz != 0  || verti !=0)
         {
-            HealthBar.health -= 0.1f;
+            HealthBar.health -= 0.09f;
         }
         else
         {
             if(HealthBar.health < 150)
-                HealthBar.health += 0.1f;
+                HealthBar.health += 0.07f;
         }
 
         
